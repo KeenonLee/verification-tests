@@ -99,10 +99,10 @@ Feature: stibuild.feature
   @noproxy @connected
   @network-ovnkubernetes @network-openshiftsdn
   @heterogeneous @arm64 @amd64
-  Scenario: OCP-22596:ImageRegistry Create app with template eap73-basic-s2i with jbosseap rhel7 image
+  Scenario: OCP-22596:ImageRegistry Create app with template eap74-basic-s2i with jbosseap rhel7 image
     Given I have a project
     When I run the :new_app client command with:
-      | template | eap73-basic-s2i |
+      | template | eap74-basic-s2i |
     Then the step should succeed
     Given the "eap-app-build-artifacts-1" build was created
     And the "eap-app-build-artifacts-1" build completed
